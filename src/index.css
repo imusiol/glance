@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --color-bg: #1a1b26;
+  --color-bg-secondary: #24283b;
+  --color-bg-tertiary: #292e42;
+  --color-fg: #c0caf5;
+  --color-fg-muted: #565f89;
+  --color-accent: #7aa2f7;
+  --color-border: #3b4261;
+  --color-hover: #292e42;
+  --ui-font-size: 14px;
+  --preview-font-size: 16px;
+}
+
+[data-theme="light"] {
+  --color-bg: #f0f0f3;
+  --color-bg-secondary: #e4e4e8;
+  --color-bg-tertiary: #d8d8dc;
+  --color-fg: #24283b;
+  --color-fg-muted: #6b7089;
+  --color-accent: #2e5cb8;
+  --color-border: #c0c0c8;
+  --color-hover: #d8d8dc;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: var(--ui-font-size, 14px);
+}
+
+/* Markdown prose overrides */
+.prose {
+  --tw-prose-body: var(--color-fg);
+  --tw-prose-headings: var(--color-fg);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-fg);
+  --tw-prose-code: var(--color-fg);
+  --tw-prose-quotes: var(--color-fg-muted);
+  --tw-prose-quote-borders: var(--color-border);
+  --tw-prose-hr: var(--color-border);
+  --tw-prose-bullets: var(--color-fg-muted);
+  --tw-prose-counters: var(--color-fg-muted);
+  color: var(--color-fg);
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: var(--color-fg);
+}
+
+.prose blockquote {
+  border-left-color: var(--color-accent);
+  color: var(--color-fg-muted);
+}
+
+.prose hr {
+  border-color: var(--color-border);
+}
+
+.prose pre {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+}
+
+.prose code {
+  color: var(--color-fg);
+}
+
+.prose strong {
+  color: var(--color-fg);
+}
+
+.prose ul > li::marker,
+.prose ol > li::marker {
+  color: var(--color-fg-muted);
+}
