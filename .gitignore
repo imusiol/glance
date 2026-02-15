@@ -25,3 +25,6 @@ dist-ssr
 
 # Temp files
 temp/
+
+# Claude Code local settings
+.claude/
